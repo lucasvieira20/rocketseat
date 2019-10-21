@@ -14,6 +14,12 @@ module.exports = {
 				allowNull: false,
 				password_hash: Sequelize.STRING
 			},
+
+			email: {
+				type: Sequelize.STRING,
+				allowNull: false
+			},
+
 			password_hash: {
 				type: Sequelize.STRING,
 				allowNull: false
@@ -27,6 +33,12 @@ module.exports = {
 			updated_at: {
 				type: Sequelize.DATE,
 				allowNull: false
+			},
+
+			administrator: {
+				type: Sequelize.BOOLEAN,
+				defaultValue: false,
+				allowNull: true
 			}
 		});
 	},
